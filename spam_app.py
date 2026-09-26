@@ -3,13 +3,9 @@ import joblib
 import re
 import string
 
-
-# Load the trained model and TF-IDF vectorizer
 model = joblib.load("spam_svm_model.pkl")
 vectorizer = joblib.load("tfidf_vectorizer.pkl")
 
-
-# Same preprocessing used during training
 def clean_text(text):
     text = text.lower()
 
